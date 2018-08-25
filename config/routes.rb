@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do
       get 'london_3d_map'
       get 'london_3d_with_animation'
+      get 'interactions_with_2d'
     end
   end
 end

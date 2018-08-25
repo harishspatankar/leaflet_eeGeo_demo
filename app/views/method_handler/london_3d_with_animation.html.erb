@@ -6,13 +6,13 @@
   </head>
   <body>
     <center>
-    <h3>3D Map</h1>
+    <h3>3D Map Animate</h1>
     <div id="map" style="width: 900px; height: 500px;"></div>
-    <a href = "method_handler/london_3d_map">Back to 2D</a> | <a href = "method_handler/london_3d_map">Animate</a>
+    <a href = "<%= london_3d_map_method_handler_index_url %>">Back to 3D</a> | <a href = "<%= interactions_with_2d_method_handler_index_url %>">Next</a>
     <script>
     var map = L.eeGeo.map('map',"<%= @api_key %>", {
       center: [51.505412, -0.075536],
-      zoom: 15
+      zoom: 13
     });
     map.setView([51.505412, -0.075536], 17, {headingDegrees: 300,tiltDegrees:5.0});
     </script>

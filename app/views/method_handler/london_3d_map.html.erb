@@ -8,12 +8,13 @@
     <center>
     <h3>3D Map</h1>
     <div id="map" style="width: 900px; height: 500px;"></div>
-    <a href = "/method_handler">Back to 2D</a> | <a href = "/method_handler/london_3d_with_animation">Animate</a>
+    <a href = "<%= root_url %>">Back to 2D</a> | <a href = "<%= london_3d_with_animation_method_handler_index_url %>">Animate</a>
     <script>
-    var map = L.eeGeo.map('map',"<%= @api_key %>", {
+    var map = L.eeGeo.map('map', "<%= @api_key %>", {
       center: [51.505412, -0.075536],
       zoom: 15
     });
+
     </script>
   </body>
 </html>
