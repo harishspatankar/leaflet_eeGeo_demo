@@ -1,0 +1,21 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Building Gorgeous 3D maps with eegeo.js and Leaflet</title>
+  </head>
+  <body>
+    <center>
+    <h3>2D Map</h1>
+    <div id="map" style="width: 900px; height: 500px;"></div>
+    <a href = "method_handler/london_3d_map">Upgrade</a>
+    <script>
+    var map = L.map('map', {
+      center: [18.5204, 73.8567],
+      zoom: 15
+    });
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    </script>
+  </body>
+</html>

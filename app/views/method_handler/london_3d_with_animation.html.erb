@@ -1,0 +1,20 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn-webgl.eegeo.com/eegeojs/api/v0.1.780/eegeo.js"></script>
+    <title>3D maps with eegeo.js and Leaflet</title>
+  </head>
+  <body>
+    <center>
+    <h3>3D Map</h1>
+    <div id="map" style="width: 900px; height: 500px;"></div>
+    <a href = "method_handler/london_3d_map">Back to 2D</a> | <a href = "method_handler/london_3d_map">Animate</a>
+    <script>
+    var map = L.eeGeo.map('map',"<%= @api_key %>", {
+      center: [51.505412, -0.075536],
+      zoom: 15
+    });
+    map.setView([51.505412, -0.075536], 17, {headingDegrees: 300,tiltDegrees:5.0});
+    </script>
+  </body>
+</html>
