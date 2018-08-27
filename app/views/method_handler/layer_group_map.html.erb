@@ -7,19 +7,19 @@
     <center>
     <h3>2D Map</h1>
     <div id="map" style="width: 900px; height: 500px;"></div>
-    <a href = "<%= london_3d_map_method_handler_index_url %>">Upgrade</a>
+    <a href = "<%= root_url %>">Finish</a>
     <script>
     var mumbai = L.marker([19.0760, 72.8777]).bindPopup('This is Mumbai'),
-        pune    = L.marker([18.5204, 73.8567]).bindPopup('This is Pune'),
-        nashik    = L.marker([19.9975, 73.7898]).bindPopup('This is Nashik'),
-        nagpur    = L.marker([21.1458, 79.0882]).bindPopup('This is Nagpur');
+        pune   = L.marker([18.5204, 73.8567]).bindPopup('This is Pune'),
+        nashik = L.marker([19.9975, 73.7898]).bindPopup('This is Nashik'),
+        nagpur = L.marker([21.1458, 79.0882]).bindPopup('This is Nagpur');
 
     var cities = L.layerGroup([mumbai, pune, nashik, nagpur]);
 
     var grayscale = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
                     id: 'MapID',
                     attribution:  '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}),
-        streets   = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+          streets = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
                     id: 'MapID',
                     attribution:  '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'});
 
